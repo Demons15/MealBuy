@@ -221,7 +221,7 @@
                     android:textColor="@color/color_333333"
                     android:textSize="@dimen/x24" />
 
-                <com.cxsz.wristwatch.main.widget.CustomScrollview
+                <com.cxsz.mealbuy.component.CustomScrollview
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scrollbars="none">
@@ -545,7 +545,7 @@
                             </RelativeLayout>
                         </LinearLayout>
                     </LinearLayout>
-                </com.cxsz.wristwatch.main.widget.CustomScrollview>
+                </com.cxsz.mealbuy.component.CustomScrollview>
 
                 <TextView
                     android:id="@+id/end_time"
