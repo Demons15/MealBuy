@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/good_des_info"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/x64"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/x20"
+    android:paddingTop="@dimen/x22"
+    android:paddingRight="@dimen/x20"
+    android:text="推荐套餐"
+    android:textColor="#A6A6A6"
+    android:textSize="@dimen/x22" />

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/voice_overlay_packet_item_area"
+    android:layout_width="@dimen/x178"
+    android:layout_height="@dimen/x166"
+    android:layout_marginBottom="@dimen/x22"
+    android:layout_marginRight="@dimen/x16"
+    android:background="@mipmap/voice_package_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/voice_overlay_packet_title_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x18"
+            android:text="语音叠加包"
+            android:textColor="#52A8FD"
+            android:textSize="@dimen/x24"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/voice_overlay_packet_capacity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x22"
+            android:text="500分钟"
+            android:textColor="#52A8FD"
+            android:textSize="@dimen/x32" />
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/x10"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x36"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="售价:"
+                android:textColor="#4D4D4D"
+                android:textSize="@dimen/x20" />
+
+            <TextView
+                android:id="@+id/voice_overlay_packet_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/x12"
+                android:text="245"
+                android:textColor="#4D4D4D"
+                android:textSize="@dimen/x28" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/x4"
+                android:text="元"
+                android:textColor="#4D4D4D"
+                android:textSize="@dimen/x16" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/voice_overlay_packet_des_info"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x22"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/x12"
+        android:gravity="center"
+        android:paddingLeft="@dimen/x20"
+        android:paddingRight="@dimen/x20"
+        android:text="仅当月有效"
+        android:textColor="@color/white"
+        android:textSize="@dimen/x18" />
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cxsz.mealbuy">
+
+    <application android:theme="@style/AppTheme">
+        <activity
+            android:name=".view.activity.BusinessManagementActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.concat.businessManagement" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.MealDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.MineMealActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.concat.mineMeal" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.RealNameActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.concat.realName" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

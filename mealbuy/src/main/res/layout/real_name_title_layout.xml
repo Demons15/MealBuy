@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_title_area"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#0575D8"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/x44">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x88">
+
+        <LinearLayout
+            android:id="@+id/main_left_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/x40"
+            android:paddingRight="@dimen/x40">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/real_name_back" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/main_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x32" />
+
+
+        <LinearLayout
+            android:id="@+id/main_right_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x32"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/alert_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x12"
+                android:text="收起信息"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x26" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/real_name_notice_hide" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

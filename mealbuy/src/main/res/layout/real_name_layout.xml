@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/real_name_title_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/real_name_web_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+
+        <RelativeLayout
+            android:id="@+id/notice_area"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x240"
+            android:layout_alignParentTop="true"
+            android:background="@mipmap/rectangle"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/x40"
+                android:paddingRight="@dimen/x40">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x80"
+                    android:layout_marginTop="@dimen/x4">
+
+                    <TextView
+                        android:id="@+id/card_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="17220350005"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/x52" />
+
+                    <LinearLayout
+                        android:layout_width="@dimen/x160"
+                        android:layout_height="@dimen/x52"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/copy_shape"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/copy_card_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="复制卡号"
+                            android:textColor="#3E94E0"
+                            android:textSize="@dimen/x22" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x80">
+
+                    <TextView
+                        android:id="@+id/iccid_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="ICCID：89860 2F219 18800 10314"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/x26" />
+
+                    <LinearLayout
+                        android:layout_width="@dimen/x160"
+                        android:layout_height="@dimen/x52"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/copy_shape"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/copy_iccid"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="复制后四位"
+                            android:textColor="#3E94E0"
+                            android:textSize="@dimen/x22" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

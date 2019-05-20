@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/x44"
+    android:layout_marginRight="@dimen/x8"
+    android:layout_marginBottom="@dimen/x16"
+    android:background="@drawable/tag_bg"
+    android:text="推荐套餐"
+    android:textColor="@drawable/text_color" />

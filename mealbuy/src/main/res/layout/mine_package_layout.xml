@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x440"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x272"
+            android:background="@mipmap/my_package_icon"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x92"
+                android:layout_marginTop="@dimen/x88">
+
+                <RelativeLayout
+                    android:id="@+id/base_left_iv"
+                    android:layout_width="@dimen/x120"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true">
+
+                    <TextView
+                        android:id="@+id/left_back_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/x33"
+                        android:text="@string/dialog_return"
+                        android:textColor="#485465"
+                        android:textSize="@dimen/x29"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/left_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/x38"
+                        android:src="@mipmap/back_icon" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/base_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="我的套餐"
+                    android:textColor="#485465"
+                    android:textSize="@dimen/x32" />
+
+                <ImageView
+                    android:id="@+id/add_contact_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/x17"
+                    android:paddingRight="@dimen/x17"
+                    android:src="@mipmap/mail_list_add_bt"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/right_area"
+                    android:layout_width="@dimen/x120"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:id="@+id/base_right_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/x38" />
+
+                    <TextView
+                        android:id="@+id/base_right_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/x33"
+                        android:text="保存"
+                        android:textColor="#287FDF"
+                        android:textSize="@dimen/x32"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x92"
+                android:layout_marginLeft="@dimen/x44"
+                android:layout_marginTop="@dimen/x32">
+
+                <TextView
+                    android:id="@+id/card_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/x44" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/x44"
+            android:layout_marginTop="@dimen/x276"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/iccid_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x4"
+                android:textColor="#4D4D4D"
+                android:textSize="@dimen/x24" />
+
+            <TextView
+                android:id="@+id/card_state_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x28"
+                android:textColor="#FFAD28"
+                android:textSize="@dimen/x44" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/x36"
+            android:layout_marginBottom="@dimen/x26"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/real_name_already_icon" />
+
+            <TextView
+                android:id="@+id/real_name_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x4"
+                android:textColor="#287FDF"
+                android:textSize="@dimen/x24" />
+
+            <TextView
+                android:id="@+id/network_type_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x36"
+                android:textColor="#4D4D4D"
+                android:textSize="@dimen/x24" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x20"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/x40">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x88">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="当前使用"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/x30" />
+
+                    <TextView
+                        android:id="@+id/update_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/x40"
+                        android:textColor="@color/color_999999"
+                        android:textSize="@dimen/x22" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/meal_data_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/x24" />
+
+                <com.cxsz.wristwatch.main.widget.CustomScrollview
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="@dimen/x400"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/x32"
+                            android:background="@drawable/overlay_pack_bg_shape"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/flow_unit"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="@dimen/x30"
+                                    android:layout_marginTop="@dimen/x28"
+                                    android:text="流量(M)"
+                                    android:textColor="@color/color_333333"
+                                    android:textSize="@dimen/x24" />
+
+                                <TextView
+                                    android:id="@+id/buy_flow_package"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginTop="@dimen/x20"
+                                    android:layout_marginRight="@dimen/x20"
+                                    android:background="@drawable/overlay_pack_shape"
+                                    android:paddingLeft="@dimen/x12"
+                                    android:paddingTop="@dimen/x4"
+                                    android:paddingRight="@dimen/x12"
+                                    android:paddingBottom="@dimen/x2"
+                                    android:text="购买叠加包"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/x20" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/x20"
+                                android:layout_marginBottom="@dimen/x4"
+                                android:paddingLeft="@dimen/x30"
+                                android:paddingRight="@dimen/x28">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left"
+                                        android:text="剩余"
+                                        android:textColor="#757575"
+                                        android:textSize="@dimen/x20" />
+
+                                    <TextView
+                                        android:id="@+id/remain_flow_size"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0"
+                                        android:textColor="#212121"
+                                        android:textSize="@dimen/x28" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="总量"
+                                        android:textColor="#757575"
+                                        android:textSize="@dimen/x20" />
+
+                                    <TextView
+                                        android:id="@+id/all_flow_size"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="0"
+                                        android:textColor="#4D4D4D"
+                                        android:textSize="@dimen/x24" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="right"
+                                        android:text="已用"
+                                        android:textColor="#757575"
+                                        android:textSize="@dimen/x20" />
+
+                                    <TextView
+                                        android:id="@+id/have_user_flow_size"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="right"
+                                        android:text="0"
+                                        android:textColor="#212121"
+                                        android:textSize="@dimen/x28" />
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <ProgressBar
+                                android:id="@+id/flow_detail_progress"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/x12"
+                                android:layout_marginLeft="@dimen/x30"
+                                android:layout_marginRight="@dimen/x28"
+                                android:progress="10"
+                                android:progressDrawable="@drawable/progress_bg" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/x4"
+                                android:layout_marginBottom="@dimen/x20"
+                                android:paddingLeft="@dimen/x30"
+                                android:paddingRight="@dimen/x28">
+
+                                <TextView
+                                    android:id="@+id/have_use_flow_percent_size"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:text="0%"
+                                    android:textColor="#212121"
+                                    android:textSize="@dimen/x24" />
+
+                                <TextView
+                                    android:id="@+id/remain__flow_percent_size"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:text="0%"
+                                    android:textColor="#212121"
+                                    android:textSize="@dimen/x24" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="@dimen/x400"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/x20"
+                            android:layout_marginTop="@dimen/x32"
+                            android:layout_marginRight="@dimen/x40"
+                            android:background="@drawable/overlay_pack_bg_shape"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="@dimen/x30"
+                                    android:layout_marginTop="@dimen/x28"
+                                    android:text="语音(分钟)"
+                                    android:textColor="@color/color_333333"
+                                    android:textSize="@dimen/x24" />
+
+                                <TextView
+                                    android:id="@+id/buy_voice_package"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginTop="@dimen/x20"
+                                    android:layout_marginRight="@dimen/x20"
+                                    android:background="@drawable/overlay_pack_shape"
+                                    android:paddingLeft="@dimen/x12"
+                                    android:paddingTop="@dimen/x4"
+                                    android:paddingRight="@dimen/x12"
+                                    android:paddingBottom="@dimen/x2"
+                                    android:text="购买叠加包"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/x20" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/x20"
+                                android:layout_marginBottom="@dimen/x4"
+                                android:paddingLeft="@dimen/x30"
+                                android:paddingRight="@dimen/x28">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left"
+                                        android:text="剩余"
+                                        android:textColor="#757575"
+                                        android:textSize="@dimen/x20" />
+
+                                    <TextView
+                                        android:id="@+id/remain_voice_size"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0"
+                                        android:textColor="#212121"
+                                        android:textSize="@dimen/x28" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="总量"
+                                        android:textColor="#757575"
+                                        android:textSize="@dimen/x20" />
+
+                                    <TextView
+                                        android:id="@+id/all_voice_size"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="0"
+                                        android:textColor="#4D4D4D"
+                                        android:textSize="@dimen/x24" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="right"
+                                        android:text="已用"
+                                        android:textColor="#757575"
+                                        android:textSize="@dimen/x20" />
+
+                                    <TextView
+                                        android:id="@+id/voice_have_user_size"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="right"
+                                        android:text="0"
+                                        android:textColor="#212121"
+                                        android:textSize="@dimen/x28" />
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <ProgressBar
+                                android:id="@+id/voice_detail_progress"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/x12"
+                                android:layout_marginLeft="@dimen/x30"
+                                android:layout_marginRight="@dimen/x28"
+                                android:progressDrawable="@drawable/progress_bg" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/x4"
+                                android:layout_marginBottom="@dimen/x20"
+                                android:paddingLeft="@dimen/x30"
+                                android:paddingRight="@dimen/x28">
+
+                                <TextView
+                                    android:id="@+id/have_use_voice_percent_size"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:text="0%"
+                                    android:textColor="#212121"
+                                    android:textSize="@dimen/x24" />
+
+                                <TextView
+                                    android:id="@+id/remain_voice_percent_size"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:text="0%"
+                                    android:textColor="#212121"
+                                    android:textSize="@dimen/x24" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.cxsz.wristwatch.main.widget.CustomScrollview>
+
+                <TextView
+                    android:id="@+id/end_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x32"
+                    android:layout_marginBottom="@dimen/x32"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/x22" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/no_user_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x20"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x88"
+                    android:paddingLeft="@dimen/x40">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="暂未使用"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/x30" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/no_use_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x40"
+                        android:layout_marginRight="@dimen/x40"
+                        android:minHeight="@dimen/x224"
+                        android:nestedScrollingEnabled="false" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

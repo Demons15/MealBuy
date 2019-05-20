@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x88"
+            android:layout_marginTop="@dimen/x44">
+
+            <RelativeLayout
+                android:id="@+id/base_left_iv"
+                android:layout_width="@dimen/x120"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x38"
+                    android:src="@mipmap/back_icon" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/base_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/packet_details"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="@dimen/x32" />
+
+                <TextView
+                    android:id="@+id/phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="17220350005"
+                    android:textColor="#4D4D4D"
+                    android:textSize="@dimen/x24" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x298"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/x40"
+                    android:layout_marginTop="@dimen/x20"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/package_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="移动500M语音卡"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/x34" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x20"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/package_unit_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="268元/年"
+                            android:textColor="#FFAD28"
+                            android:textSize="@dimen/x50" />
+
+                        <TextView
+                            android:id="@+id/monthly_average_cost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="（月均 ¥15）"
+                            android:textColor="#FFAD28"
+                            android:textSize="@dimen/x24" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/package_detail_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x20"
+                        android:text="套餐包含: 10M流量+30分钟语音"
+                        android:textColor="#4D4D4D"
+                        android:textSize="@dimen/x24" />
+
+                    <TextView
+                        android:id="@+id/term_of_validity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x8"
+                        android:text="有效期: 1个月"
+                        android:textColor="#4D4D4D"
+                        android:textSize="@dimen/x24" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/x34"
+                    android:background="@drawable/packet_tag_info_bg"
+                    android:paddingBottom="@dimen/x6"
+                    android:paddingLeft="@dimen/x26"
+                    android:paddingRight="@dimen/x26"
+                    android:paddingTop="@dimen/x6"
+                    android:text="加送2个月，畅享14个月！"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x22"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/x26"
+                    android:src="@mipmap/packet_bg" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x28"
+                android:layout_marginRight="@dimen/x28"
+                android:layout_marginTop="@dimen/x20"
+                android:background="@drawable/packet_buy_mode"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/package_show_way"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x28"
+                    android:layout_marginRight="@dimen/x28"
+                    android:layout_marginTop="@dimen/x28"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/package_upgrade"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x64"
+                        android:layout_weight="1"
+                        android:background="@drawable/packet_buy_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="套餐升级"
+                        android:textColor="@drawable/packet_buy_text_selector"
+                        android:textSize="@dimen/x28"
+                        android:visibility="invisible" />
+
+                    <RadioButton
+                        android:id="@+id/package_buy"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x64"
+                        android:layout_marginLeft="@dimen/x22"
+                        android:layout_weight="1"
+                        android:background="@drawable/packet_buy_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="套餐购买"
+                        android:textColor="@drawable/packet_buy_text_selector"
+                        android:textSize="@dimen/x28" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/x56"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="@dimen/x32"
+                    android:layout_marginTop="@dimen/x42"
+                    android:background="@drawable/packet_notice_shape"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/x26"
+                    android:paddingRight="@dimen/x24"
+                    android:text="购买套餐之日起，原套餐自动失效，该套餐立即生效"
+                    android:textColor="#4D4D4D"
+                    android:textSize="@dimen/x20" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/x26"
+                    android:layout_marginLeft="@dimen/x32"
+                    android:layout_marginRight="@dimen/x32"
+                    android:layout_marginTop="@dimen/x24"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="生效方式"
+                        android:textColor="#2D2D2D"
+                        android:textSize="@dimen/x28" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="立即生效"
+                        android:textColor="#4D4D4D"
+                        android:textSize="@dimen/x26" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:layout_marginLeft="@dimen/x32"
+                    android:background="#F2F2F2"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x100"
+                    android:layout_marginLeft="@dimen/x32"
+                    android:layout_marginRight="@dimen/x32"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="优惠券"
+                        android:textColor="#2D2D2D"
+                        android:textSize="@dimen/x28" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="充值赠送满减¥20减¥50"
+                            android:textColor="#A6A6A6"
+                            android:textSize="@dimen/x26" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/x22"
+                            android:text=">"
+                            android:textColor="#A6A6A6"
+                            android:textSize="@dimen/x26" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x28"
+                android:layout_marginRight="@dimen/x28"
+                android:layout_marginTop="@dimen/x20"
+                android:background="@drawable/packet_buy_mode"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/x22"
+                    android:layout_marginLeft="@dimen/x32"
+                    android:layout_marginTop="@dimen/x22"
+                    android:text="支付方式"
+                    android:textColor="#2D2D2D"
+                    android:textSize="@dimen/x28" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="#F2F2F2" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioGroup
+                        android:id="@+id/pay_way_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x32"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/we_chat_pay"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x100"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/pay_way_selector"
+                            android:drawablePadding="@dimen/x16" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x1"
+                            android:background="#F2F2F2"
+                            android:visibility="gone" />
+
+                        <RadioButton
+                            android:id="@+id/account_pay"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x100"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/pay_way_selector"
+                            android:drawablePadding="@dimen/x16"
+                            android:visibility="gone" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/x100"
+                            android:layout_marginLeft="@dimen/x88"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@mipmap/wechat_icon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/x16"
+                                android:text="微信支付"
+                                android:textColor="#606060"
+                                android:textSize="@dimen/x30" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/x100"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="@dimen/x88"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@mipmap/account_icon" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="@dimen/x16"
+                                    android:text="账号支付"
+                                    android:textColor="#606060"
+                                    android:textSize="@dimen/x30" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/account_remain_info"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/x28"
+                                android:text="可用余额：¥2000"
+                                android:textColor="#9C9C9C"
+                                android:textSize="@dimen/x24" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pay_right_now"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x100"
+                android:layout_marginBottom="@dimen/x282"
+                android:layout_marginLeft="@dimen/x28"
+                android:layout_marginRight="@dimen/x28"
+                android:layout_marginTop="@dimen/x64"
+                android:background="@drawable/right_now_pay_shape"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="立即支付"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x34" />
+
+                <TextView
+                    android:id="@+id/to_be_paid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="需支付:18元"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/x22" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

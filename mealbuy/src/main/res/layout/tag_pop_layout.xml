@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.zhy.view.flowlayout.TagFlowLayout
+        android:id="@+id/tag_area_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x16"
+        android:layout_marginTop="@dimen/x34"
+        android:layout_marginRight="@dimen/x30"
+        android:layout_marginBottom="@dimen/x32"
+        android:paddingRight="@dimen/x8"
+        android:paddingBottom="@dimen/x16"
+        zhy:max_select="1" />
+</LinearLayout>

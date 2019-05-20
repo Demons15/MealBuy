@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/x130"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x128"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/choose_icon"
+            android:layout_width="@dimen/x8"
+            android:layout_height="match_parent"
+            android:background="#93CA05" />
+
+        <RelativeLayout
+            android:id="@+id/select_area"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/select_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="套餐购买"
+                android:textColor="#606060"
+                android:textSize="@dimen/x24" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="#E6E6E6" />
+</LinearLayout>

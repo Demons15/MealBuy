@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/online_recharge_item_area"
+    android:layout_width="@dimen/x260"
+    android:layout_height="@dimen/x148"
+    android:background="@drawable/online_recharge_item_shape">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/online_recharge_item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="100元"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/x32" />
+
+        <TextView
+            android:id="@+id/online_recharge_item_price_info_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/x8"
+            android:text="到账100元"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/x22" />
+
+        <TextView
+            android:id="@+id/online_recharge_item_price_info_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="另赠券50元"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/x22" />
+    </LinearLayout>
+</RelativeLayout>

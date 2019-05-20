@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/flow_overlay_pack_item_area"
+    android:layout_width="@dimen/x174"
+    android:layout_height="@dimen/x162"
+    android:layout_marginBottom="@dimen/x22"
+    android:layout_marginRight="@dimen/x16"
+    android:background="@mipmap/flow_package_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/flow_overlay_pack_title_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x78"
+            android:layout_marginRight="@dimen/x78"
+            android:layout_marginTop="@dimen/x18"
+            android:text="流量叠加包"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x24"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/flow_overlay_pack_capacity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x18"
+            android:text="500M"
+            android:textColor="#07D667"
+            android:textSize="@dimen/x36" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x36"
+            android:layout_marginTop="@dimen/x8"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="售价:"
+                android:textColor="#4D4D4D"
+                android:textSize="@dimen/x20" />
+
+            <TextView
+                android:id="@+id/flow_overlay_pack_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/x12"
+                android:text="245"
+                android:textColor="#4D4D4D"
+                android:textSize="@dimen/x28" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/x4"
+                android:text="元"
+                android:textColor="#4D4D4D"
+                android:textSize="@dimen/x16" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/flow_overlay_pack_des_info"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x22"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/x10"
+        android:gravity="center"
+        android:paddingLeft="@dimen/x20"
+        android:paddingRight="@dimen/x20"
+        android:text="仅当月有效"
+        android:textColor="@color/white"
+        android:textSize="@dimen/x18" />
+</RelativeLayout>
