@@ -15,18 +15,22 @@ import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import com.cxsz.mealbuy.R;
 import com.cxsz.mealbuy.component.MealInfoHelper;
 import com.cxsz.mealbuy.component.ToastUtil;
 import com.cxsz.mealbuy.base.BaseActivity;
 import com.cxsz.mealbuy.bean.MealInfoBean;
 import com.cxsz.mealbuy.component.AndroidBugWorkRound;
+import com.cxsz.mealbuy.presenter.presenterImpl.MineMealPresenterImpl;
+import com.cxsz.mealbuy.presenter.presenterInterface.MineMealPresenter;
+import com.cxsz.mealbuy.view.viewInterface.MineMealView;
 import com.just.agentweb.AgentWeb;
 import com.just.agentweb.DefaultWebClient;
 import com.just.agentweb.WebChromeClient;
 import com.just.agentweb.WebViewClient;
 
-public class RealNameActivity extends BaseActivity implements View.OnClickListener {
+public class RealNameActivity extends BaseActivity implements View.OnClickListener, MineMealView {
     TextView title;
     View rightIcon; //收起提示框
     View noticeArea;
@@ -42,6 +46,7 @@ public class RealNameActivity extends BaseActivity implements View.OnClickListen
     private String realnameUrl = "";
     protected AgentWeb mAgentWeb;
     private View leftIcon;
+    private MineMealPresenter mineMealPresenter;
 
     @Override
     protected int getLayoutId() {
@@ -65,30 +70,9 @@ public class RealNameActivity extends BaseActivity implements View.OnClickListen
         copyCardNumber.setOnClickListener(this);
         copyIccid.setOnClickListener(this);
         title.setText("实名认证");
-        MealInfoBean.BodyBean bodyBean = MealInfoHelper.getInstance().getMealInfoBeans();
-        cardNumber.setText(bodyBean.getCardNumber() + "");
-        iccidNumber.setText("ICCID：" + bodyBean.getIccid() + "");
-        if (bodyBean.getRealnameUrl() != null) {
-            realnameUrl = bodyBean.getRealnameUrl();
-        }
-        if (realnameUrl.contains("wap.fj.10086.cn")) {
-            copyIccid.setText("复制后四位");
-        } else {
-            copyIccid.setText("复制ICCID");
-        }
+        mineMealPresenter = new MineMealPresenterImpl(this);
+        mineMealPresenter.RequestSimCardMealInfo(RealNameActivity.this, MealInfoHelper.getInstance().getNumber());
         myClipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-        mAgentWeb = AgentWeb.with(this)
-                .setAgentWebParent(realNameWebView, new LinearLayout.LayoutParams(-1, -1))
-                .useDefaultIndicator()
-                .setWebChromeClient(mWebChromeClient)
-                .setWebViewClient(mWebViewClient)
-                .setMainFrameErrorView(R.layout.agentweb_error_page, -1)
-                .setSecurityType(AgentWeb.SecurityType.STRICT_CHECK)
-                .setOpenOtherPageWays(DefaultWebClient.OpenOtherPageWays.ASK)//打开其他应用时，弹窗咨询用户是否前往其他应用
-                .interceptUnkownUrl() //拦截找不到相关页面的Scheme
-                .createAgentWeb()
-                .ready()
-                .go(realnameUrl);
     }
 
 
@@ -145,15 +129,18 @@ public class RealNameActivity extends BaseActivity implements View.OnClickListen
 
     @Override
     protected void onPause() {
-        mAgentWeb.getWebLifeCycle().onPause();
         super.onPause();
-
+        if (mAgentWeb != null) {
+            mAgentWeb.getWebLifeCycle().onPause();
+        }
     }
 
     @Override
     protected void onResume() {
-        mAgentWeb.getWebLifeCycle().onResume();
         super.onResume();
+        if (mAgentWeb != null) {
+            mAgentWeb.getWebLifeCycle().onResume();
+        }
     }
 
     @Override
@@ -167,7 +154,9 @@ public class RealNameActivity extends BaseActivity implements View.OnClickListen
     protected void onDestroy() {
         super.onDestroy();
         //mAgentWeb.destroy();
-        mAgentWeb.getWebLifeCycle().onDestroy();
+        if (mAgentWeb != null) {
+            mAgentWeb.getWebLifeCycle().onDestroy();
+        }
     }
 
     public void copySomeThing(String info, String tag) {
@@ -199,5 +188,54 @@ public class RealNameActivity extends BaseActivity implements View.OnClickListen
                 copySomeThing(iccidNumber.getText().toString(), "ICCID号");
             }
         }
+    }
+
+    @Override
+    public <T> void ResponseSimCardMealInfo(T t) {
+        MealInfoBean.BodyBean bodyBean = (MealInfoBean.BodyBean) t;
+        MealInfoHelper.getInstance().setMealInfoBeans(bodyBean);
+        MealInfoBean.BodyBean mealInfoBeans = MealInfoHelper.getInstance().getMealInfoBeans();
+        cardNumber.setText(mealInfoBeans.getCardNumber() + "");
+        iccidNumber.setText("ICCID：" + mealInfoBeans.getIccid() + "");
+        if (mealInfoBeans.getRealnameUrl() != null) {
+            realnameUrl = mealInfoBeans.getRealnameUrl();
+        }
+        if (realnameUrl.contains("wap.fj.10086.cn")) {
+            copyIccid.setText("复制后四位");
+        } else {
+            copyIccid.setText("复制ICCID");
+        }
+        mAgentWeb = AgentWeb.with(this)
+                .setAgentWebParent(realNameWebView, new LinearLayout.LayoutParams(-1, -1))
+                .useDefaultIndicator()
+                .setWebChromeClient(mWebChromeClient)
+                .setWebViewClient(mWebViewClient)
+                .setMainFrameErrorView(R.layout.agentweb_error_page, -1)
+                .setSecurityType(AgentWeb.SecurityType.STRICT_CHECK)
+                .setOpenOtherPageWays(DefaultWebClient.OpenOtherPageWays.ASK)//打开其他应用时，弹窗咨询用户是否前往其他应用
+                .interceptUnkownUrl() //拦截找不到相关页面的Scheme
+                .createAgentWeb()
+                .ready()
+                .go(realnameUrl);
+    }
+
+    @Override
+    public <T> void ResponseSimCardMealList(T t) {
+
+    }
+
+    @Override
+    public void showLoadingView() {
+        startProgressDialog();
+    }
+
+    @Override
+    public void closeLoadingView() {
+        stopProgressDialog();
+    }
+
+    @Override
+    public void showErrorInfo(String info) {
+        ToastUtil.show(RealNameActivity.this, info);
     }
 }
