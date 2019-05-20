@@ -2,7 +2,6 @@ package com.cxsz.mealbuy.base;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -17,10 +16,8 @@ import com.cxsz.mealbuy.component.LoadingDialog;
 import me.yokeyword.fragmentation.SupportFragment;
 
 /**
- * Created by llf on 2017/3/1.
  * 基础的Fragment
  */
-
 public abstract class BaseFragment extends SupportFragment {
     private boolean isViewPrepared; // 标识fragment视图已经初始化完毕
     private boolean hasFetchData; // 标识已经触发过懒加载数据
@@ -161,60 +158,6 @@ public abstract class BaseFragment extends SupportFragment {
     @Override
     public void onDetach() {
         super.onDetach();
-    }
-
-    /**
-     * 通过Class跳转界面
-     **/
-    public void startActivity(Class<?> cls) {
-        startActivity(cls, null);
-    }
-
-    /**
-     * 含有Bundle通过Class跳转界面
-     **/
-    public void startActivity(Class<?> cls, Bundle bundle) {
-        Intent intent = new Intent(getActivity(), cls);
-        if (bundle != null) {
-            intent.putExtras(bundle);
-        }
-        startActivity(intent);
-    }
-
-    /**
-     * 通过Class跳转界面
-     **/
-    public void startActivityForResult(Class<?> cls, int requestCode) {
-        startActivityForResult(cls, null, requestCode);
-    }
-
-    /**
-     * 含有Bundle通过Class跳转界面
-     **/
-    public void startActivityForResult(Class<?> cls, Bundle bundle, int requestCode) {
-        Intent intent = new Intent(getActivity(), cls);
-        if (bundle != null) {
-            intent.putExtras(bundle);
-        }
-        startActivityForResult(intent, requestCode);
-    }
-
-    /**
-     * 跳转界面并关闭当前界面
-     *
-     * @param clazz 目标Activity
-     */
-    protected void startThenKill(Class<?> clazz) {
-        startThenKill(clazz, null);
-    }
-
-    /**
-     * @param clazz  目标Activity
-     * @param bundle 数据
-     */
-    protected void startThenKill(Class<?> clazz, Bundle bundle) {
-        startActivity(clazz, bundle);
-        getActivity().finish();
     }
 
     /**
