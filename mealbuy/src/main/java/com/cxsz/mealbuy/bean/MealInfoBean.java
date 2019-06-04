@@ -96,7 +96,6 @@ public class MealInfoBean implements Serializable {
         private int ifRenew;
         private int ifExamine;
         private String networkState;
-        private int whiteListSwitch;
         private int currentSimPackage;
 
         private String networkStandard;
@@ -169,10 +168,6 @@ public class MealInfoBean implements Serializable {
             if (mapData.get("networkState") != null) {
                 String networkState = String.valueOf(mapData.get("networkState"));
                 bodyBean.setNetworkState(networkState);
-            }
-            if (((Double) mapData.get("whiteListSwitch")) != null) {
-                double whiteListSwitch = ((Double) mapData.get("whiteListSwitch")).doubleValue();
-                bodyBean.setWhiteListSwitch((int) whiteListSwitch);
             }
             if (((Double) mapData.get("currentSimPackage")) != null) {
                 double currentSimPackage = ((Double) mapData.get("currentSimPackage")).doubleValue();
@@ -499,14 +494,6 @@ public class MealInfoBean implements Serializable {
 
         public void setCustomType(String customType) {
             this.customType = customType;
-        }
-
-        public int getWhiteListSwitch() {
-            return whiteListSwitch;
-        }
-
-        public void setWhiteListSwitch(int whiteListSwitch) {
-            this.whiteListSwitch = whiteListSwitch;
         }
 
         public String getVoiceState() {
