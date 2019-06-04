@@ -87,6 +87,7 @@ public class MealInfoBean implements Serializable {
          * simFlow : {"useCallDuration":0,"useMessageHistory":0,"year":2019,"useCallDurationHistory":0,"useMessage":0,"useTraffic":5.48,"updateTime":"2019-03-27 10:53:12","packageMessage":0,"iccid":"898602F31318C0378248","packageTraffic":-1,"packageCallDuration":100,"month":4,"createTime":"2019-03-27 10:53:12","useTrafficHistory":0,"createUser":"d798969b9b194354a11ef5f958de74ef","flowId":"cfb05dee47d94de1b9be44801a52f541","cardNumber":"17234248248","customerId":"fb92fe0ca7974337ac183a30d12ccdcd","goodsId":"6df71430b18b0b49e0535c111eac826d","orgId":"fb92fe0ca7974337ac183a30d12ccdcd"}
          */
 
+
         private int cashback;
         private int realname;
         private int cancelPackage;
