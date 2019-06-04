@@ -60,14 +60,7 @@ public class MineMealPresenterImpl implements MineMealPresenter {
                     bodyBean.getSimPackageInfo(mapData, bodyBean);
                     simPackageList.add(bodyBean);
                 }
-                ArrayList<SimPackageBean.BodyBean> bodyBeans = new ArrayList<SimPackageBean.BodyBean>();
-                for (int i = 0; i < simPackageList.size(); i++) {
-                    int packageState = simPackageList.get(i).getPackageState();
-                    if (packageState == 0) {
-                        bodyBeans.add(simPackageList.get(i));
-                    }
-                }
-                mMineMealView.ResponseSimCardMealList(bodyBeans);
+                mMineMealView.ResponseSimCardMealList(simPackageList);
                 mMineMealView.closeLoadingView();
             }
 
