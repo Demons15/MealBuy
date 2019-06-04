@@ -1,5 +1,6 @@
 package com.cxsz.mealbuy.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -22,13 +23,13 @@ import java.util.List;
  */
 public class PackagePurchaseRecycleGroupAdapter extends RecyclerView.Adapter<PackagePurchaseRecycleGroupAdapter.ViewHolder> {
     private List<MealGoodsFilterBean> chatListBeanList;
-    private Context context;
+    private Activity context;
     private OnItemClickListener mItemClickListener;
     public static final int FIRST_STICKY_VIEW = 1;
     public static final int HAS_STICKY_VIEW = 2;
     public static final int NONE_STICKY_VIEW = 3;
 
-    public PackagePurchaseRecycleGroupAdapter(Context context, List<MealGoodsFilterBean> chatListBeanList) {
+    public PackagePurchaseRecycleGroupAdapter(Activity context, List<MealGoodsFilterBean> chatListBeanList) {
         this.context = context;
         this.chatListBeanList = chatListBeanList;
     }
@@ -75,6 +76,7 @@ public class PackagePurchaseRecycleGroupAdapter extends RecyclerView.Adapter<Pac
                     Intent intent = new Intent(context, MealDetailsActivity.class);
                     intent.putExtra(KeyConstants.PACKET_INFO, mealGoodsBodyBean.getBody().get(position));
                     context.startActivity(intent);
+                    context.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 }
             });
         }

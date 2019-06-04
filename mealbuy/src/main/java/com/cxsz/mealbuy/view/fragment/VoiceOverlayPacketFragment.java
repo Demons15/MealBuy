@@ -41,6 +41,7 @@ public class VoiceOverlayPacketFragment extends BaseMainFragment {
                     Intent intent = new Intent(getActivity(), MealDetailsActivity.class);
                     intent.putExtra(KeyConstants.PACKET_INFO, mealGoodsBodyBeanList.get(position));
                     startActivity(intent);
+                    getActivity().overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 }
             });
         }

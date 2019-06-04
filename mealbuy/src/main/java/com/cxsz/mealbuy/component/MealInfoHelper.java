@@ -1,5 +1,6 @@
 package com.cxsz.mealbuy.component;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -123,11 +124,12 @@ public class MealInfoHelper {
         this.mealInfoBeans = mealInfoBeans;
     }
 
-    public static void doStartApplicationWithPackageName(Context context, String action) {
+    public static void doStartApplicationWithPackageName(Activity activity, String action) {
         Intent intent = new Intent();
         intent.setAction(action);    // 通过intent隐式跳转进行跳转
         intent.addCategory(Intent.CATEGORY_DEFAULT);
-        context.startActivity(intent);
+        activity.startActivity(intent);
+        activity.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
     public void setHostIsDebug(boolean isDebug) {

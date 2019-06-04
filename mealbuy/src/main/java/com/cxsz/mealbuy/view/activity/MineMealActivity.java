@@ -215,10 +215,12 @@ public class MineMealActivity extends BaseActivity implements View.OnClickListen
             Intent flIntent = new Intent(this, BusinessManagementActivity.class);
             flIntent.putExtra(KeyConstants.BUSINESS_TYPE, KeyConstants.FLOW_OVERLAY_PACK);
             startActivity(flIntent);
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         } else if (id == R.id.buy_voice_package) {
             Intent voIntent = new Intent(this, BusinessManagementActivity.class);
             voIntent.putExtra(KeyConstants.BUSINESS_TYPE, KeyConstants.VOICE_OVERLAY_PACKET);
             startActivity(voIntent);
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         }
     }
 
