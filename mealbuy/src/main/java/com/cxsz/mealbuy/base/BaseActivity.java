@@ -65,7 +65,11 @@ public abstract class BaseActivity extends SupportActivity {
         super.onDestroy();
         AppManager.getInstance().removeActivity(this);
     }
-
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+    }
     /**
      * 开启加载效果
      */
