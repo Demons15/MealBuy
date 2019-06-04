@@ -24,7 +24,7 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 public class MealNetRequestModelImpl implements MealNetRequestModel {
-    private static final int DEFAULT_TIMEOUT = 5;
+    private static final int DEFAULT_TIMEOUT = 15;
 
     private Retrofit retrofit;
     private MealRequestService networkService;
