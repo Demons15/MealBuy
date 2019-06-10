@@ -41,7 +41,7 @@ public class NoUseMealRecycleAdapter extends RecyclerView.Adapter<NoUseMealRecyc
         SimPackageBean.BodyBean mealGoodsBodyBean = chatListBeanList.get(position);
         holder.mealDetailInfo.setText(mealGoodsBodyBean.getGoodsName());
         if (mealGoodsBodyBean.getPackageTraffic() == -1) {
-            holder.mealIncludeInfo.setText("无线流量+" + mealGoodsBodyBean.getCallDuration() + "分钟/月");
+            holder.mealIncludeInfo.setText("无限流量+" + mealGoodsBodyBean.getCallDuration() + "分钟/月");
         } else {
             holder.mealIncludeInfo.setText("流量" + mealGoodsBodyBean.getPackageTraffic() + "M+" + mealGoodsBodyBean.getCallDuration() + "分钟/月");
         }

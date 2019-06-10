@@ -22,6 +22,7 @@ import com.cxsz.mealbuy.presenter.presenterInterface.MineMealPresenter;
 import com.cxsz.mealbuy.view.viewInterface.MineMealView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MineMealActivity extends BaseActivity implements View.OnClickListener, MineMealView {
     TextView cardNumber;//卡号
@@ -243,11 +244,19 @@ public class MineMealActivity extends BaseActivity implements View.OnClickListen
     @Override
     public <T> void ResponseSimCardMealList(T t) {
         ArrayList<SimPackageBean.BodyBean> bodyBeans = (ArrayList<SimPackageBean.BodyBean>) t;
-        if (bodyBeans.size() > 0) {
+        List<SimPackageBean.BodyBean> beans = new ArrayList<>();
+        for (int i = 0; i < bodyBeans.size(); i++) {
+            SimPackageBean.BodyBean bodyBean = bodyBeans.get(i);
+            int packageState = bodyBean.getPackageState();
+            if (packageState == 0) {
+                beans.add(bodyBean);
+            }
+        }
+        if (beans.size() > 0) {
             LinearLayoutManager packagePurchaseLayoutManager = new LinearLayoutManager(MineMealActivity.this);
             packagePurchaseLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
             noUseList.setLayoutManager(packagePurchaseLayoutManager);
-            NoUseMealRecycleAdapter packagePurchaseRecycleAdapter = new NoUseMealRecycleAdapter(MineMealActivity.this, bodyBeans);
+            NoUseMealRecycleAdapter packagePurchaseRecycleAdapter = new NoUseMealRecycleAdapter(MineMealActivity.this, beans);
             noUseList.setAdapter(packagePurchaseRecycleAdapter);
             noUseArea.setVisibility(View.VISIBLE);
         } else {
