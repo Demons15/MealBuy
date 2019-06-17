@@ -211,7 +211,8 @@
                         android:layout_centerVertical="true"
                         android:layout_marginRight="@dimen/x40"
                         android:textColor="@color/color_999999"
-                        android:textSize="@dimen/x22" />
+                        android:textSize="@dimen/x22"
+                        android:visibility="gone" />
                 </RelativeLayout>
 
                 <TextView
