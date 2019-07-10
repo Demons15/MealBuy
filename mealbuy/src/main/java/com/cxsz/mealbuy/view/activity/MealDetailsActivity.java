@@ -21,6 +21,8 @@ import com.cxsz.mealbuy.view.viewInterface.MealDetailView;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 
+import org.greenrobot.eventbus.EventBus;
+
 public class MealDetailsActivity extends BaseActivity implements View.OnClickListener, MealDetailView {
     RadioGroup packageShowWay;
     RadioButton packageUpgrade;
@@ -145,7 +147,8 @@ public class MealDetailsActivity extends BaseActivity implements View.OnClickLis
     @Override
     public <T> void ResponseCreateOrder(T t) {
         CreateOrderResultBean createOrderResultBean = (CreateOrderResultBean) t;
-        mealDetailPresenter.RequestPayForOrder(api, MealInfoHelper.getInstance().getWeChatAppId(), createOrderResultBean);
+//        mealDetailPresenter.RequestPayForOrder(api, MealInfoHelper.getInstance().getWeChatAppId(), createOrderResultBean);
+        EventBus.getDefault().post(createOrderResultBean);
     }
 
     /**
