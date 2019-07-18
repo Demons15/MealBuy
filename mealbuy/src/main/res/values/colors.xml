@@ -1,237 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#FCFCFC</color>
-    <color name="colorAccent">#FCFCFC</color>
-    <color name="bg_app">#F6F6F6</color>
-    <color name="color_main">#0EC5DB</color><!--主色调-->
-    <color name="tv_choose">#9200b0ff</color>
-    <color name="bg_money">#A520C3</color>
-    <color name="blue_bt">#249EFA</color>
-    <color name="blue_bg">#5099F4</color>
-    <color name="gray">#ff898989</color>
-    <color name="transparent_background4">#90000000</color><!--半透明-->
-    <color name="transparent_background">#50000000</color><!--半透明-->
-    <color name="transparent_background2">#20000000</color><!--半透明-->
-    <color name="transparent_background3">#FFF2F2F2</color><!--半透明-->
-    <color name="transparent">#00000000</color><!--透明-->
-    <color name="tab_unselect">#666666</color>
-    <color name="tab_select">#00B0FF</color>
-    <color name="blue_bg_choose">#2377E0</color>
-    <color name="green">#006030</color>
-    <color name="text_nomal">#707070</color>
-    <color name="light_blue">#2EBCEB</color>
-    <color name="title_blue">#2ebceb</color>
-    <color name="deep_blue">#2595bb</color>
+    <!--主色调-->
+    <!--半透明-->
+    <!--半透明-->
+    <!--半透明-->
+    <!--半透明-->
+    <!--透明-->
     <color name="white">#FFFFFFFF</color>
-    <color name="white_1">#FFF2F2F2</color>
-    <color name="white_text">#FEFEFE</color>
-    <color name="white_gray">#eae9e9</color>
-    <color name="text_main">#FF545454</color>
-    <color name="text_voice_number">#FF8A00</color>
-    <color name="dialog_bg">#ff000000</color>
     <!--侧滑删除的字的颜色，按下-->
-    <color name="deletePressed">#d28288</color>
     <!--侧滑删除的字的颜色，正常-->
-    <color name="deleteNor">#fc3847</color>
-    <color name="color_backgound_gray">#f5f5f5</color>
-    <color name="light_gray">#3000</color>
-    <color name="result_view">#b0000000</color>
-    <color name="viewfinder_mask">#60000000</color>
-    <color name="possible_result_points">#c0ffff00</color>
 
-    <color name="shape_start">#5d27d3</color>
-    <color name="shape_end">#3FAFFF</color>
-    <color name="shape_start_onpress">#6203ab</color>
-    <color name="shape_end_onpress">#0679cc</color>
-
-    <color name="shape_bg_header_start">#D327C3</color>
-    <color name="shape_bg_header_end">#3FDBFF</color>
-
-    <color name="fresh_1">#FFFFB3</color>
-    <color name="fresh_2">#94FF85</color>
-    <color name="fresh_3">#75FFC2</color>
-    <color name="fresh_4">#888FDEFF</color>
-    <color name="fresh_5">#B3B3FF</color>
-    <color name="fm_inviter_bg">#f8f0c7</color>
-
-    <color name="mono_1">#042D42</color>
-    <color name="mono_2">#0B84C2</color>
-    <color name="background_item">#6280F6</color>
-    <color name="jump_blue">#368BF8</color>
-    <color name="mono_3">#075075</color>
-    <color name="mono_4">#57BEF2</color>
-    <color name="mono_5">#326E8C</color>
-
-    <color name="item_bg_red">#ff3f02</color>
-    <color name="item_bg_green">#17cb94</color>
-    <color name="item_bg_blue">#11afff</color>
-    <color name="item_bg_orange">#ff8804</color>
-
-    <color name="liberty_1">#f19f05</color>
-    <color name="liberty_2">#94D4D4</color>
-    <color name="liberty_3">#88B4BB</color>
-    <color name="liberty_4">#76AEAF</color>
-    <color name="liberty_5">#2A6D82</color>
-
-    <color name="red2">#f2060a</color>
-    <color name="red_text">#E66767</color>
-    <color name="red1">#e189b5</color>
-    <color name="red_lqrw">#ff4e4e</color>
-    <color name="bt_onpress">#efb087</color>
-    <color name="colorful_3">#F5C700</color>
-    <color name="colorful_4">#6A961F</color>
-    <color name="colorful_5">#008885</color>
-
-    <color name="greens_1">#55FC70</color>
-    <color name="greens_2">#62E24C</color>
-    <color name="greens_3">#ACF960</color>
-    <color name="greens_4">#CBE24C</color>
-    <color name="greens_5">#FCF355</color>
-
-    <color name="joyful_1">#D9508A</color>
-    <color name="carmer_background">#303030</color>
-    <color name="orange">#F07E49</color>
-    <color name="joyful_3">#FEF778</color>
-    <color name="joyful_4">#6AA786</color>
-    <color name="joyful_5">#35C2D1</color>
-
-    <color name="pastel_1">#405980</color>
-    <color name="pastel_2">#95A57C</color>
-    <color name="orange_2">#c36d34</color>
-    <color name="pastel_4">#BF8686</color>
-    <color name="pastel_5">#B33050</color>
-    <color name="circle_point">#f64343</color><!--红色圆点-->
-
-    <color name="vordiplom_1">#FABF00</color>
-    <color name="sel_car">#FFE508</color>
-    <color name="blue_sky">#0197D2</color>
-    <color name="blue_text">#194FEB</color>
-    <color name="blue_frame_unpress">#314EC3</color>
-    <color name="blue_frame_onpress">#031c83</color>
-
-    <color name="blue_light">#888FDEFF</color>
+    <!--红色圆点-->
 
     <color name="color_333333">#333333</color>
     <color name="black">#000000</color>
-    <color name="color_666666">#666666</color>
     <color name="color_999999">#999999</color>
-    <color name="blue_deep">#3140FF</color>
-    <color name="line_gray">#e6e6e6</color>
-    <color name="round_line_gray">#D9D9D9</color>
-    <color name="round_shadow_gray">#dbdbdb</color>
-    <color name="blue_medium">#2595bb</color>
-    <color name="hint_color">#55353535</color>
 
-    <drawable name="smssdk_dialog_btn_nor">#00000000</drawable>
-    <drawable name="smssdk_dialog_btn_pre">#ff282a2b</drawable>
-
-    <color name="color_gray">#ff999999</color>
-    <color name="color_gray_divider">#ffd9d9da</color>
-
-    <color name="main_value_color">#6A961F</color>
-    <color name="green1">#05b37e</color>
-    <color name="yellow_light">#55D9B8A2</color>
-    <color name="transparent_light">#15000000</color>
-    <color name="navpage">#FFE1E8EB</color>
-
-    <color name="text1">#00b5e9</color>
-    <color name="text2">#B0B0B0</color>
-    <color name="color1">#F0F0F0</color>
-    <color name="color2">#FFFFFF</color>
-    <color name="color3">#B0B0B0</color>
-    <color name="color5">#57C5E8</color>
-    <color name="taobao_black">#333333</color>
-    <color name="offline_down_size">#777777</color>
-    <color name="gray_lite">#c5c5c5</color>
-    <color name="grey">#ebebeb</color>
-
-    <color name="dialog_bg_white">#f8f8f8</color>
-    <color name="dialog_bg_white_start">#f0f0f0</color>
-    <color name="divider_bg">#d7d7db</color>
-    <color name="button_bg_press">#eaeaea</color>
-    <color name="bg_press">#f6f6f6</color><!--灰白色背景-->
-    <color name="bar_blue">#2d96e9</color>
-    <color name="text_white">#ffffff</color>
-    <color name="bg_white">#ffffff</color>
-    <color name="text_black">#000000</color>
-    <color name="text_blue">#2f8df1</color>
-    <color name="text_gray">#999999</color>
-    <color name="text_press_gray">#a9a9a9</color>
-    <color name="background_green">#45c98d</color>
-    <color name="text_orange">#ffffff</color>
-    <color name="text_green">#45c98d</color>
-    <color name="text_transparent">#00000000</color>
-    <color name="text_purple">#be729f</color>
-    <color name="text_red">#C4161C</color>
-    <color name="bg_red">#C4161C</color>
-    <color name="bg_thumbnail_default">#ff646464</color>
-
-    <color name="view_gray">#ebebeb</color>
-    <color name="bg_gray">#efeff3</color>
-    <color name="video_bg">#252525</color>
-    <color name="black_transparent_30">#b3575958</color>
-    <color name="translucent_white_24p">#3DFFFFFF</color>
-
-    <color name="black_overlay">#66000000</color>
-    <color name="bg_video_state">#96000000</color>
-
-    <color name="half_transparent">#80000000</color>
-    <color name="background_transparent">#00000000</color>
-
-    <color name="bg_pie_chart_used">#999999</color>
-    <color name="orange_balance">#FF7225</color>
-
-    <color name="bg_playback_seek_bar">#2fff9933</color>
-    <color name="bg_playback_seek_bar_sos">#0fCC3300</color>
-    <color name="bg_playback_seek_thumb">#ff7f27</color>
-    <color name="bg_playback_tip">#ff2727</color>
-
-    <color name="simpletooltip_background">@color/colorAccent</color>
-    <color name="wqqawqdqasdqasdsimpletooltip_text">@android:color/primary_text_light</color>
-    <color name="simpletooltip_arrow">@color/colorAccent</color>
+    <!--灰白色背景-->
 
     <!-- 按钮颜色 白色系 -->
-    <color name="btn_color_white_normal">#ffffffff</color>
-    <color name="btn_color_white_pressed">#e5e5e5</color>
-    <color name="btn_color_white_disable">#CCCCCC</color>
-    <color name="input_shape_bg_color">#D9D9D9</color>
-    <color name="line_bg">#D8D8D8</color>
-    <color name="center_info_bg">#F6F6F6</color>
-    <color name="setting_line_color">#BBBBBB</color>
 
-    <color name="button_unpress_color">#314EC3</color><!--按钮未点击-->
-    <color name="button_onpress_color">#032b66</color>
-    <color name="ccc_color">#CCCCCC</color>
-    <color name="setting_line_bg">#F2F2F2</color>
-    <color name="main_color">#0EC5DB</color>
-    <color name="mine_line_bg">#DDDDDD</color><!--按钮已点击-->
+    <!--按钮未点击-->
+    <!--按钮已点击-->
 
-    <color name="no_select">#666666</color>
-    <color name="select">#0EC5DB</color>
-    <color name="line">#0EC5DB</color>
-    <color name="space_line">#CCCCCC</color>
-    <color name="color_eee">#EEEEEE</color>
-    <color name="item_press_color">#47D9ED</color>
-    <color name="blue_color">#3140FF</color>
-    <color name="text_color">#FEFEFE</color>
-    <color name="message_count_color">#E8360D</color>
-    <color name="menu_text_color">#485465</color>
-    <color name="title_bg">#FCFCFC</color>
     <color name="main_text_color">#485465</color>
-    <color name="left_menu_bg">#10253C</color>
-    <color name="login_out_text_color">#C1D114</color>
-    <color name="check_color">#C1D114</color>
-    <color name="un_check_color">#CCCCCC</color>
-    <color name="choose_color">#B1CC1E</color>
-    <color name="menu_info_color">#4D4D4D</color>
-    <color name="next_step">#1DA118</color>
 
 
-
-    <color name="tip">#9c9c9c</color>
-    <color name="bg_focus">#DDDDDD</color>
-    <color name="red_500">#ef4836</color>
-    <color name="progress_bg">#F7F7F7</color>
-    <color name="progress_speed">#FFAD28</color>
-    <color name="device_choose_color">#AAFF33</color>
 </resources>
