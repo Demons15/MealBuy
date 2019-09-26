@@ -147,8 +147,8 @@ public class MealDetailsActivity extends BaseActivity implements View.OnClickLis
     @Override
     public <T> void ResponseCreateOrder(T t) {
         CreateOrderResultBean createOrderResultBean = (CreateOrderResultBean) t;
-//        mealDetailPresenter.RequestPayForOrder(api, MealInfoHelper.getInstance().getWeChatAppId(), createOrderResultBean);
-        EventBus.getDefault().post(createOrderResultBean);
+        mealDetailPresenter.RequestPayForOrder(api, MealInfoHelper.getInstance().getWeChatAppId(), createOrderResultBean);
+//        EventBus.getDefault().post(createOrderResultBean);
     }
 
     /**
